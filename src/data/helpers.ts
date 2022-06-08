@@ -4,15 +4,8 @@ const toTitleCase = (str: string) => {
   return str[0].toUpperCase() + str.substring(1);
 };
 
-export const championToReadable = (name: ChampionName) => {
-  return name
-    .toLowerCase()
-    .split(" ")
-    .map(toTitleCase)
-    .join(" ")
-    .split("'")
-    .map(toTitleCase)
-    .join("'");
+export const challengeToReadable = (name: string) => {
+  return name.toLowerCase().split("_").map(toTitleCase).join(" ");
 };
 
 export const championToImage = (name: ChampionName) => {

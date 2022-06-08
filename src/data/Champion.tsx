@@ -1,5 +1,6 @@
 import { ChampionName } from "./data";
 import { championToImage } from "./helpers";
+import "./Champion.css";
 
 export interface ChampionProps {
   name: ChampionName;
