@@ -1,4 +1,4 @@
-import { FIVE_GROUPS, THREE_GROUPS } from "../data/data";
+import { FIVE_GROUPS, THREE_GROUPS } from "../data";
 import Challenge from "./Challenge";
 import "./ChallengeGroup.css";
 

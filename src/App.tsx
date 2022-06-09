@@ -1,10 +1,10 @@
 import "./App.css";
-import { ALL_CHAMPS } from "./data/data";
+import { ALL_CHAMPS } from "./data";
 import { useState } from "react";
-import { championToImage } from "./data/helpers";
-import Champions from "./Champions";
-import Challenges from "./Challenges";
-import CompCreator from "./CompCreator";
+import { championToImage } from "./helpers";
+import Champions from "./tabs/Champions";
+import Challenges from "./tabs/Challenges";
+import CompCreator from "./tabs/CompCreator";
 
 // Preload images
 ALL_CHAMPS.forEach((champ) => {

@@ -1,4 +1,4 @@
-import { challengeToReadable } from "../data/helpers";
+import { challengeToReadable } from "../helpers";
 import "./Challenge.css";
 
 export interface ChallengeProps {

@@ -1,9 +1,8 @@
 import { useState } from "react";
-import ChallengeGroup from "./challenge/ChallengeGroup";
-import "./Challenges.css";
-import ChampionGroup from "./data/ChampionGroup";
-import { ALL_CHAMPS, ALL_GROUPS, ChampionName } from "./data/data";
-import { getIntersection } from "./data/helpers";
+import ChallengeGroup from "../challenge/ChallengeGroup";
+import ChampionGroup from "../champion/ChampionGroup";
+import { ALL_CHAMPS, ALL_GROUPS, ChampionName } from "../data";
+import { getIntersection } from "../helpers";
 
 const Challenges: React.FunctionComponent = () => {
   const [selected, setSelected] = useState<boolean[]>(

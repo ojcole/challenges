@@ -1,12 +1,8 @@
 import { useState } from "react";
-import ChallengeGroup from "./challenge/ChallengeGroup";
-import ChampionGroup from "./data/ChampionGroup";
-import {
-  ALL_CHAMPS,
-  ALL_GROUP_NAMES,
-  CHAMPION_CHALLENGE_MAP,
-} from "./data/data";
-import { getIntersection } from "./data/helpers";
+import ChallengeGroup from "../challenge/ChallengeGroup";
+import ChampionGroup from "../champion/ChampionGroup";
+import { ALL_CHAMPS, ALL_GROUP_NAMES, CHAMPION_CHALLENGE_MAP } from "../data";
+import { getIntersection } from "../helpers";
 
 const Champions: React.FunctionComponent = () => {
   const [selected, setSelected] = useState(

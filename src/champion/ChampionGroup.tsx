@@ -1,5 +1,5 @@
 import Champion from "./Champion";
-import { ChampionName } from "./data";
+import { ChampionName } from "../data";
 import "./ChampionGroup.css";
 
 export interface ChampionGroupProps {

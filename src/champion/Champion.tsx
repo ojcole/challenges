@@ -1,5 +1,5 @@
-import { ChampionName } from "./data";
-import { championToImage } from "./helpers";
+import { ChampionName } from "../data";
+import { championToImage } from "../helpers";
 import "./Champion.css";
 
 export interface ChampionProps {
