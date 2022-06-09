@@ -1071,6 +1071,33 @@ export const INHUMAN_SCREECHING_SOUNDS_CHAMPS: ChampionName[] = [
   VEL_KOZ,
 ];
 
+export const ALL_GROUP_NAMES: string[] = [
+  IT_HAS_ULTIMATE_IN_THE_NAME,
+  GET_OVER_HERE,
+  HOLD_THAT_POSE,
+  WERE_GOOD_OVER_HERE,
+  NOWHERE_TO_HIDE,
+  WE_PROTEC,
+  ITS_A_TRAP,
+  THEY_JUST_DONT_DIE,
+  WHERED_THEY_GO,
+  SUMMONERS_ON_THE_RIFT,
+  IM_HELPING,
+  FIVE_UNDER_FIVE,
+  FOR_DEMACIA,
+  ICE_ICE_BABY,
+  EVERYBODY_WAS_WUJU_FIGHTING,
+  THE_SUN_DISC_NEVER_SETS,
+  PEAK_PERFORMANCE,
+  CHEMTECH_COMRADES,
+  ALL_HANDS_ON_DECK,
+  ELEMENTAL_MY_DEAR_WATSON,
+  STRENGTH_ABOVE_ALL,
+  CALCULATED,
+  SPOOKY_SCARY_SKELETONS,
+  INHUMAN_SCREECHING_SOUNDS,
+];
+
 export const ALL_GROUPS: [string, ChampionName[]][] = [
   [IT_HAS_ULTIMATE_IN_THE_NAME, IT_HAS_ULTIMATE_IN_THE_NAME_CHAMPS],
   [GET_OVER_HERE, GET_OVER_HERE_CHAMPS],
@@ -1134,3 +1161,13 @@ export const THREE_GROUPS: string[] = [
   WHERED_THEY_GO,
   IM_HELPING,
 ];
+
+export const CHAMPION_CHALLENGE_MAP = new Map<ChampionName, string[]>();
+
+ALL_GROUPS.forEach(([name, champs]) => {
+  champs.forEach((champ) => {
+    const current = CHAMPION_CHALLENGE_MAP.get(champ);
+    if (current !== undefined) current?.push(name);
+    else CHAMPION_CHALLENGE_MAP.set(champ, [name]);
+  });
+});

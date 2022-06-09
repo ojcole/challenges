@@ -3,7 +3,7 @@ import "./Challenge.css";
 
 export interface ChallengeProps {
   name: string;
-  select: () => void;
+  select?: () => void;
   selected: boolean;
 }
 
@@ -15,7 +15,11 @@ const Challenge: React.FunctionComponent<ChallengeProps> = ({
   return (
     <div
       onClick={select}
-      className={"challenge-container" + (selected ? " selected" : "")}
+      className={
+        "challenge-container" +
+        (select !== undefined ? " selectable" : "") +
+        (selected ? " selected" : "")
+      }
     >
       <img src={`./challenges/${name}.png`} alt={name} />
       <p className="name">{challengeToReadable(name)}</p>

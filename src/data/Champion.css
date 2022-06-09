@@ -1,3 +1,33 @@
 .champion {
-    display: block;
+  display: block;
+}
+
+.championContainer {
+  box-sizing: border-box;
+  width: 128px;
+  height: 128px;
+  position: relative;
+  user-select: none;
+}
+
+.championContainer img {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.championContainer.selectable {
+  cursor: pointer;
+}
+
+.championContainer.selected {
+  border: solid 8px #155efd;
+}
+
+.championContainer.selected img {
+  top: -8px;
+  left: -8px;
 }

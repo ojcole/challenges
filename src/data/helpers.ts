@@ -20,3 +20,7 @@ export const championToImage = (name: ChampionName) => {
     .map(toTitleCase)
     .join("'");
 };
+
+export const getIntersection = (set1: Iterable<any>, set2: Set<any>) => {
+  return new Set([...set1].filter((elem) => set2.has(elem)));
+};

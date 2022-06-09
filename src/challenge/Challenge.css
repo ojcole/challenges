@@ -1,8 +1,7 @@
 .challenge-container {
-  width: 150px;
-  height: 200px;
+  width: 140px;
+  height: 190px;
   text-align: center;
-  cursor: pointer;
   border: solid 1px #ccc;
   padding: 10px;
 }
@@ -14,5 +13,9 @@
 }
 
 .challenge-container.selected {
-  background-color: rgb(187, 203, 216);
+  background-color: #bbcbd8;
+}
+
+.challenge-container.selectable {
+  cursor: pointer;
 }

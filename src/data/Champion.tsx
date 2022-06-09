@@ -4,11 +4,24 @@ import "./Champion.css";
 
 export interface ChampionProps {
   name: ChampionName;
+  selected: boolean;
+  select?: () => void;
 }
 
-const Champion: React.FunctionComponent<ChampionProps> = ({ name }) => {
+const Champion: React.FunctionComponent<ChampionProps> = ({
+  name,
+  select,
+  selected,
+}) => {
   return (
-    <div>
+    <div
+      className={
+        "championContainer" +
+        (select !== undefined ? " selectable" : "") +
+        (selected ? " selected" : "")
+      }
+      onClick={select}
+    >
       <img
         src={`./champions/${championToImage(name)}Square.png`}
         alt={name}

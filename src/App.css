@@ -1,11 +1,19 @@
-.challenges {
+.tabs {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
 }
 
-.app {
+.tab {
+  flex-grow: 1;
+  text-align: center;
+  border: solid 1px #ccc;
+  cursor: pointer;
   padding: 10px;
+}
+
+.tab.selected {
+  background-color: #bbcbd8;
+}
+
+.body {
+  padding: 10px 25px;
 }
